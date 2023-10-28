@@ -1,0 +1,68 @@
+<%- include("header") -%>
+
+    <body>
+        <!--TITLE-->
+        <section id="title">
+            <div class="container-fluid1">
+                <!-- Nav Bar -->
+                <nav class="navbar navbar-expand-lg navbar-dark">
+                    <img id="logo" src="images/logo.png" alt="slam-logo">
+                    <a class="navbar-brand" href="">Slam</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#footer">Contact</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#pricing">Pricing</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="/register">Register</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+
+
+
+
+            </div>
+
+
+        </section>
+
+
+        <!--LOGIN -->
+
+        <center>
+            <div class="box-signin">
+                <h3 class="box-text  box-heading">Login</h3>
+                <form action="/login" method="POST">
+                    <div class="mb-3 box-text">
+                        <label for="exampleInputEmail1" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                            name="username" autocomplete="off">
+                        <div id="emailHelp" class="form-text"></div>
+                    </div>
+                    <div class="mb-3 box-text">
+                        <label for="exampleInputPassword1" class="form-label">Password</label>
+                        <div class="col-auto">
+                            <input type="password" id="inputPassword6" class="form-control"
+                                aria-describedby="passwordHelpInline" name="password">
+                        </div>
+                        
+
+                    </div>
+
+                    <button type="submit" class="btn btn-outline-light btn-lg login-button">Login</button>
+                </form>
+            </div>
+        </center>
+        <%- include("footer") -%>

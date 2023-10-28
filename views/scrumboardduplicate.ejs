@@ -1,0 +1,181 @@
+<%- include("header") -%>
+
+    <body>
+        <!--TITLE-->
+        <section id="title">
+            <div class="container-fluid">
+                <!-- Nav Bar -->
+
+                <nav class="navbar navbar-expand-lg navbar-dark">
+
+                    <img id="logo" src="images/logo.png" alt="slam-logo">
+                    <a class="navbar-brand" href="">Slam</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="">Teams</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="">Calendar</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/logout">Logout</a>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                </nav>
+            </div>
+
+            <div class="section-container">
+                <!-- left side nav -->
+                <section class="sidenav-l">
+                    <div>
+                        <ul class="navbar-nav ms-auto sec">
+                            <li class="nav-item">
+                                <div class="item activ">
+                                    <span class="material-symbols-outlined">
+                                        task
+                                    </span>
+                                    <p class="text activ">
+                                        my tasks
+                                    </p>
+                                </div>
+
+                            </li>
+                            <li class="nav-item">
+
+                                <div class="item ">
+                                    <span class="material-symbols-outlined">
+                                        lab_profile
+                                    </span>
+                                    <p class="text">
+                                        reports
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <div class="item ">
+                                    <span class="material-symbols-outlined">
+                                        groups
+                                    </span>
+                                    <p class="text">
+                                        collaborate
+                                    </p>
+                                </div>
+                            </li>
+
+                            <li class="nav-item">
+
+                                <div class="item ">
+                                    <span class="material-symbols-outlined">
+                                        question_mark
+                                    </span>
+                                    <p class="text">
+                                        help
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- central section -->
+                <div class="central-section">
+                    <center>
+                        <div class="container-fluidtemp">
+
+
+                            <div class="scrum-board ">
+                                <div class="column" id="todo-column">
+                                    <h2>To Do</h2>
+                                    <ul id="todo-list" class="task-list <%=scrumboard%>" ondrop="drop(event)"
+                                        ondragover="allowDrop(event)">
+
+                                        <% todoItems.forEach(function(item){ %>
+                                            <li class="task" id="<%=item.id %>" draggable="true"
+                                                ondragstart="drag(event)">
+                                                <%= item.name %>
+                                            </li>
+
+
+                                            <% }) %>
+                                               
+                                    </ul>
+                                </div>
+                                <div class="column" id="inprogress-column">
+                                    <h2>In Progress</h2>
+                                    <ul id="inprogress-list" class="task-list <%=scrumboard%>" ondrop="drop(event)"
+                                        ondragover="allowDrop(event)">
+                                        <% inprogressItems.forEach(function(item){ %>
+                                            <li class="task" id="<%=item.id %>" draggable="true"
+                                                ondragstart="drag(event)">
+                                                <%= item.name %>
+                                            </li>
+
+
+                                            <% }) %>
+                                    </ul>
+                                </div>
+                                <div class="column" id="done-column">
+                                    <h2>Done</h2>
+                                    <ul id="done-list" class="task-list <%=scrumboard%>" ondrop="drop(event)"
+                                        ondragover="allowDrop(event)">
+                                        <% doneItems.forEach(function(item){ %>
+                                            <li class="task scrumboard1" id="<%=item.id %>" draggable="true"
+                                                ondragstart="drag(event)">
+                                                <%= item.name %>
+                                            </li>
+
+
+                                            <% }) %>
+                                    </ul>
+
+                                </div>
+                            </div>
+
+                    </center>
+
+
+
+                </div>
+
+
+                <!-- right side nav -->
+
+
+                <section class="sidenav-r">
+                    <div style="padding-top: 10px;">
+                        <center>
+                            <h3 style="color: #70707e;">Comments</h3>
+                            
+
+                        </center>
+
+                    </div>
+                </section>
+            </div>
+
+
+            <script src="/drag.js"></script>
+
+
+        </section>
+
+
+
+
+
+
+
+        <%- include("footer") -%>

@@ -1,0 +1,86 @@
+<%- include("header") -%>
+
+    <body>
+        <!--TITLE-->
+        <section id="title">
+            <div class="container-fluid1">
+                <!-- Nav Bar -->
+                <nav class="navbar navbar-expand-lg navbar-dark">
+
+                    <img id="logo" src="images/logo.png" alt="slam-logo">
+                    <a class="navbar-brand" href="">Slam</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#footer">Contact</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#pricing">Pricing</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+
+            </div>
+
+
+        </section>
+
+
+        <!--SIGNUP -->
+
+        <center>
+            <div class="box-signin">
+                <h1 class="box-text  box-heading">Sign Up</h3>
+
+                    <form action="/register" method="POST">
+                        <div class="mb-3 box-text">
+                            <label for="exampleInputEmail1" class="form-label">Email address</label>
+                           
+                            <input type="email" class="form-control" name="username" autocomplete="off">
+
+                            <div id="emailHelp" class="form-text"></div>
+                        </div>
+                        <div class="mb-3 box-text">
+                            <label for="exampleInputPassword1" class="form-label">Password</label>
+                            <div class="col-auto">
+                               
+                                <input type="password" class="form-control" name="password">
+
+                            </div>
+                            <div class="col-auto">
+                                <span id="passwordHelpInline" class="form-text">
+
+                                </span>
+                            </div>
+
+                        </div>
+
+                        <div class="mb-3 box-text">
+                            <label for="exampleInputType1" class="form-label">Type</label>
+                            <select class="form-select" name="type">
+                                <option value="productOwner">Product Owner</option>
+                                <option value="developer">Developer</option>
+                                <option value="Scrum-Master">Scrum-Master</option>
+                            </select>
+                        </div>
+                      
+
+                        <button type="submit" class="btn btn-outline-light btn-lg login-button">Sign Up</button>
+                    </form>
+                    <h6 class="after-button">Or</h3>
+                        <i class="fab fa-google footer-icon"></i>
+                        <i class="fab fa-facebook footer-icon"></i>
+                        <i class="fab fa-linkedin footer-icon"></i>
+
+                        <h5 class="after-button">Already a user?<a href="/login">LOGIN</a></h4>
+            </div>
+        </center>
+
+        <%- include("footer") -%>

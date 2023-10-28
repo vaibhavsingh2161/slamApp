@@ -1,0 +1,552 @@
+body {
+  font-family: "Montserrat";
+  background-color: #0e0c12;
+}
+
+/* TITLE */
+#logo {
+  width: 8%;
+  height: 8%;
+}
+
+#title .container-fluid {
+  padding: 3% 5% 0%;
+  border-top-color: #fff;
+  border-bottom-style: solid;
+}
+#title .container-fluid1 {
+  padding: 3% 5% 0%;
+}
+
+#title .container-fluidtemp {
+  padding: 2% 0% 3%;
+  width: 100%;
+}
+
+/* Additional Css */
+
+.activ {
+  color: white;
+}
+
+.activ:hover {
+  color: white;
+}
+
+.sec li a:hover:not(.activ) {
+  color: #ffffffbf;
+}
+
+.sec li:last-child {
+  margin-top: 100%;
+}
+
+/* section-part */
+.section-container {
+  margin-top: 1px;
+  display: flex;
+  height: 200%;
+  width: 100%;
+}
+
+/* side nav */
+
+.sidenav-l {
+  width: 15%;
+  margin: 0;
+  padding-right: 0%;
+}
+
+.sidenav-l div {
+  height: 100%;
+  width: 100%;
+
+  line-height: 3em;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.sidenav-l div::-webkit-scrollbar {
+  display: none;
+}
+
+.sidenav-l div {
+  -ms-overflow-style: none; 
+  scrollbar-width: none;
+}
+.sideBorder {
+  border-right-color: #212529;
+  border-right-style: solid;
+}
+
+.sideBorder1 {
+  border-left-color: #212529;
+  border-left-style: solid;
+}
+
+.sidenav-r {
+  float: right;
+  width: 25%;
+  margin-top: 0%;
+  margin-right: 0%;
+}
+
+.sidenav-rText {
+  background-color: #7e7170;
+  height: 0%;
+  margin-bottom: 50%;
+}
+
+.sidenav-r div {
+  height: 95%;
+  width: 80%;
+  background-color: #181818;
+  border-radius: 4px;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.sendText {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 100%;
+  margin-top: 500px;
+  margin-right: auto;
+  background-color: #daf109;
+  height: 100%;
+  color: #70707e;
+}
+
+.textIcon {
+  margin-top: 10px;
+  margin-bottom: 0px;
+  margin-right: 10px;
+  margin-left: 110px;
+}
+
+#c-input {
+  opacity: 0.1;
+  margin-top: 90%;
+  width: 100%;
+  margin-left: 10%;
+}
+
+.comments {
+    margin-top: 1.5rem;
+
+  margin-left: 10%;
+  width: 100px;
+}
+/* central section */
+
+.central-section {
+  height: 100%;
+  width: 60%;
+}
+
+.user-space {
+  display: flex;
+}
+
+#list-link {
+  text-decoration: none;
+  color: #70707e;
+  border: 2px solid #70707e;
+  padding: 2px 6px 2px 10px;
+  border-radius: 9px;
+  font-size: 0.9rem;
+}
+
+#user-icon {
+  transform: scale(4);
+  margin-top: 1rem;
+  margin-right: 2.5rem;
+  margin-left: 1.5rem;
+  padding: 10px 7px 7px 4px;
+}
+
+@media (max-width: 1028px) {
+  #title {
+    padding: 20px 5px;
+  }
+
+  #logo {
+    width: 20%;
+    height: 20%;
+  }
+}
+
+/* Navigation Bar */
+.navbar-brand {
+  font-family: "Ubuntu";
+  font-size: 3rem;
+  font-weight: bold;
+  color: #70707e;
+}
+
+.navbar {
+  padding: 0 0 1rem;
+}
+
+.nav-item {
+  padding: 0px 18px;
+}
+
+.nav-link {
+  font-size: 1.2rem;
+}
+
+/* LOGIN */
+.initial {
+  margin: 100px 60px;
+}
+.btn-initial {
+  margin: 80px 80px;
+  margin-top: 100px;
+}
+.login-button {
+  margin-top: 10px;
+  background-color: #e50914;
+  border-width: 0;
+  border-radius: 10px;
+  size: 50px;
+}
+
+.box-text {
+  text-align: left;
+  text-size-adjust: 25rem;
+  color: #70707e;
+  font-weight: 500;
+  font-family: "Montserrat";
+}
+
+.box-signin {
+  text-decoration: solid;
+  font-family: "Ubuntu";
+  padding: 3% 5% 3%;
+  font-size: 1rem;
+  border: 2px solid #70707e;
+  border-radius: 10px;
+  width: 40%;
+}
+
+.box-heading {
+  font-size: large;
+}
+
+.after-button {
+  color: #70707e;
+  margin-top: 15px;
+  width: 200px;
+}
+
+.after-button1 {
+  color: #70707e;
+  width: 200px;
+}
+
+a {
+  text-decoration: none;
+  color: #e50914;
+}
+
+a:hover {
+  color: white;
+}
+
+.footer-icon {
+  margin: 5px 10px;
+  color: #70707e;
+}
+
+/* BACKLOG */
+.backlog {
+  text-decoration: solid;
+  font-family: "Ubuntu";
+  padding: 3% 5% 3%;
+  font-size: 1rem;
+  border: 2px solid #70707e;
+  border-radius: 10px;
+  width: 40%;
+  text-align: left;
+}
+
+/* CSS for ScrumBoard */
+
+.scrum-board {
+  display: flex;
+  justify-content: space-around;
+}
+
+.column {
+  flex-basis: 30%;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+.task-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.task {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.task:hover {
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+
+/* PRODUCT BACKLOG  */
+
+h1,
+h2 {
+  color: #70707e;
+}
+
+.textProject {
+  flex: 1;
+  width: 20%;
+  color: #fff;
+  font-family: "Montserrat";
+}
+
+.box {
+  width: 100%;
+  margin: 50px auto;
+  background: #181818;
+  border-radius: 5px;
+  box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: hidden;
+}
+
+
+.text {
+  color: #fff;
+  font-family: "Montserrat";
+}
+
+.item {
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+}
+
+.item1 {
+  display: flex;
+  align-items: center;
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  border-top-color: #fff;
+  border-bottom-style: solid;
+}
+
+.item:last-child {
+  border-bottom: 0;
+}
+
+input:checked + p {
+  text-decoration: line-through;
+  text-decoration-color: #a683e3;
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: hidden;
+}
+
+input[type="checkbox"] {
+  margin: 20px;
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: hidden;
+}
+
+p {
+  margin: 0;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: 200;
+  color: #00204a;
+}
+
+form.item {
+  text-align: center;
+  margin-left: 20px;
+  width: 800px;
+}
+
+.btnAdd {
+  min-height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border-color: transparent;
+  background-color: #e50914;
+  color: #fff;
+  font-size: 30px;
+  padding-bottom: 6px;
+  border-width: 0;
+}
+
+.btnRemove {
+  border-color: transparent;
+  background-color: transparent;
+  color: #fff;
+  font-size: 30px;
+  padding-bottom: 6px;
+  border-width: 0;
+}
+
+input[type="text"] {
+  text-align: center;
+  height: 60px;
+  top: 10px;
+  border: none;
+  background: transparent;
+  font-size: 20px;
+  font-weight: 200;
+  width: 313px;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  box-shadow: inset 0 -3px 0 0 #e50914;
+}
+
+input.text {
+  width: 94.5%;
+}
+
+::placeholder {
+  color: grey;
+  opacity: 1;
+}
+
+footer {
+  color: white;
+  color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+/* PRODUCT OWNER */
+.pHeading {
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+p.text {
+  height: 50%;
+  font-weight: 500;
+  color: #70707e;
+}
+
+.addBacklog {
+  margin-left: auto;
+}
+
+.productBox {
+  width: 60%;
+  margin: 50px auto;
+  background: #181818;
+  border-radius: 5px;
+  box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: hidden;
+  padding: 1%;
+}
+
+/* CREATE SPRINT */
+
+.projectSelector {
+  width: 21%;
+  margin: 50px;
+}
+
+.sprintDiv {
+  size: 30%;
+}
+
+input.textSprint {
+  width: 93.5%;
+  color: #fff;
+  font-family: "Montserrat";
+}
+
+input.textSprint1 {
+  width: 92.5%;
+  color: #fff;
+  font-family: "Montserrat";
+}
+
+.btnScrum {
+  margin-top: 10px;
+  margin-left: 5%;
+  background-color: #181818;
+  color: #fff;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.btnScrum:hover {
+  background-color: #e50914;
+}
+
+/* CSS styling for the Scrum Board */
+.scrum-board {
+  display: flex;
+  justify-content: center;
+}
+
+.column {
+  flex: 1;
+  padding: 20px;
+  background-color: #181818;
+  border-radius: 4px;
+  margin: 5px;
+  padding: 30px;
+}
+
+.task-list {
+  min-height: 200%;
+  list-style-type: none;
+  padding: 0;
+}
+
+.task {
+  background-color: #181818;
+  color: #fff;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.task:hover {
+  background-color: #e50914;
+}
+
+.text a {
+  color: #70707e;
+}
+
+footer {
+  color: #fff;
+}

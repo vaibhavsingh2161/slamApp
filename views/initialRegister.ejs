@@ -1,0 +1,83 @@
+<%- include("header") -%>
+
+    <body>
+        <!--TITLE-->
+        <section id="title">
+            <div class="container-fluid1">
+                <!-- Nav Bar -->
+                <nav class="navbar navbar-expand-lg navbar-dark">
+
+                    <img id="logo" src="images/logo.png" alt="slam-logo">
+                    <a class="navbar-brand" href="">Slam</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="">Teams</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="">Calendar</a>
+                            </li>
+
+                        </ul>
+                    </div>
+
+
+                </nav>
+                <center>
+
+                    <div>
+
+                        <p class="text">
+                            Dharwad,
+                            <span class="material-symbols-outlined">
+                                cloudy
+                            </span>
+                            <%= temperature %> &#176; C
+
+                        </p>
+
+                        <p class="text">
+                            <%= currentDate%>
+                        </p>
+                    </div>
+
+
+                    <div class="initial">
+                        <a href="/register/developer">
+                            <button type="submit" class="btn-initial btn btn-outline-light btn-lg login-button">Register
+                                As
+                                ProductOwner</button>
+                        </a>
+
+                        <a href="/register/productOwner">
+                            <button type="submit" class="btn-initial btn btn-outline-light btn-lg login-button">Register
+                                As
+                                Developer</button>
+                        </a>
+
+
+                    </div>
+
+
+
+
+
+                </center>
+
+
+
+            </div>
+
+
+        </section>
+
+        <%- include("footer") -%>

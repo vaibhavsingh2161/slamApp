@@ -1,0 +1,98 @@
+<%- include("header") -%>
+
+    <body>
+        <!--TITLE-->
+        <section id="title">
+            <div class="container-fluid1">
+                <!-- Nav Bar -->
+                <nav class="navbar navbar-expand-lg navbar-dark">
+
+                    <img id="logo" src="images/logo.png" alt="slam-logo">
+                    <a class="navbar-brand" href="">Slam</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="">Teams</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="">Calendar</a>
+                            </li>
+                            <li>
+
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/logout">Logout</a>
+                            </li>
+
+                        </ul>
+
+
+                    </div>
+
+
+
+                </nav>
+                <center>
+
+                    <div>
+
+                        <p class="text">
+                            Dharwad,
+                            <span class="material-symbols-outlined">
+                                cloudy
+                            </span>
+                            <%= temperature %> &#176; C
+
+                        </p>
+
+                        <p class="text">
+                            <%= currentDate%>
+                        </p>
+                    </div>
+                    <h1 class="pHeading">Welcome Scrum-Master!</h1>
+
+
+
+
+                </center>
+
+                
+
+                <center>
+                    <div>
+                        <form action="/chooseproject" method="POST">
+                            <div class="mb-3 box-text projectSelector">
+                                <label for="exampleInputType1" class="form-label">Choose Project</label>
+                                <select class="form-select" name="type" id="projectSelect">
+                                    <% projects.forEach(function(item){ %>
+                                        <option value="<%= item.id %>">
+                                            <%= item.name %>
+                                        </option>
+                                        <% }) %>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-outline-light btn-lg login-button">Submit</button>
+                        </form>
+                        
+                        
+
+
+                    </div>
+                </center>
+
+
+            </div>
+
+
+        </section>
+
+        <%- include("footer") -%>

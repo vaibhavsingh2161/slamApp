@@ -1,0 +1,112 @@
+<%- include("header") -%>
+
+    <body>
+        <!--TITLE-->
+        <section id="title">
+            <div class="container-fluid1">
+                <!-- Nav Bar -->
+                <nav class="navbar navbar-expand-lg navbar-dark">
+
+                    <img id="logo" src="images/logo.png" alt="slam-logo">
+                    <a class="navbar-brand" href="">Slam</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="">Teams</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="">Calendar</a>
+                            </li>
+                        
+                            <li class="nav-item">
+                                <a class="nav-link" href="/logout">Logout</a>
+                            </li>
+
+                        </ul>
+
+
+                    </div>
+
+
+
+                </nav>
+                <center>
+
+                    <div>
+
+                        <p class="text">
+                            Dharwad,
+                            <span class="material-symbols-outlined">
+                                cloudy
+                            </span>
+                            <%= temperature %> &#176; C
+
+                        </p>
+
+                        <p class="text">
+                            <%= currentDate%>
+                        </p>
+                    </div>
+                    <h1 class="pHeading">Welcome Product Owner!</h1>
+
+
+
+
+                </center>
+
+                <div class="productBox">
+                    <div class="row">
+                        <h1 class=" col-9">Projects</h1>
+                        <form class="col-3" action="/scrumboard1?boardId=1" method="get">
+                            <input type="hidden" name="boardId" value="1">
+                        </form>
+
+                    </div>
+
+                    <% projectItems.forEach(function(item){ %>
+                        <% if (item && item.name) { %>
+                            <form action="/deleteproject" method="post">
+                                <div class="item1">
+                                    <button class="btnRemove" onChange="this.form.submit()" name="checkbox3"
+                                        value="<%=item._id %>" type="submit"><span class="material-symbols-outlined">
+                                            delete
+                                        </span></button>
+                                    <div class="textProject">
+                                        <h6>
+                                            <%= item.name %>
+                                        </h6>
+                                    </div>
+
+                                    <div class="addBacklog">
+                                        <p class="after-button1"><a href="/productbacklog">Add Backlogs</a></p>
+
+                                    </div>
+
+                                </div>
+                                <input type="hidden" name="projectName" value="project"></input>
+                            </form>
+                            <% } %>
+
+                                <% }) %>
+
+                                    <form  action="/productowner" method="post">
+                                        <input class="textSprint1" type="text" name="newProject"
+                                            placeholder="'Add Projects'" autocomplete="off">
+                                        <button class="btnAdd" type="submit" name="list1"
+                                            value="Create Sprint">+</button>
+                                    </form>
+
+                </div>
+
+        </section>
+
+        <%- include("footer") -%>

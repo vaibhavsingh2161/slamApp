@@ -1,0 +1,159 @@
+<%- include("header") -%>
+
+    <body>
+        <!--TITLE-->
+        <section id="title">
+            <div class="container-fluid">
+                <!-- Nav Bar -->
+                <nav class="navbar navbar-expand-lg navbar-dark">
+
+                    <img id="logo" src="images/logo.png" alt="slam-logo">
+                    <a class="navbar-brand" href="">Slam</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="">Teams</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="">Calendar</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/logout">Logout</a>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                </nav>
+
+
+
+            </div>
+
+            <div class="row">
+                <h2>Product Backlogs</h2>
+                <div class="sprintDiv col-3">
+
+                    <% newListItems.forEach(function(item){ %>
+                        <form action="" method="post">
+                            <div class="item">
+                                <span class="material-symbols-outlined">
+                                    subdirectory_arrow_right
+                                </span>
+                                <p class="text">
+                                    <%= item.name %>
+                                </p>
+                            </div>
+
+                        </form>
+
+                        <% }) %>
+
+                </div>
+                <div class="sprintDiv col-7">
+                    <h1>Create Sprints</h1>
+                    <div class="box">
+                        <div class="row">
+                            <h1 class=" col-9">Sprint-1</h1>
+                            <form class="col-3" action="/scrumboard1?boardId=1" method="get">
+                                <input type="hidden" name="boardId" value="1">
+                                <button class=" btnScrum " type="submit">Go To Scrumboard</button>
+                            </form>
+
+                        </div>
+
+
+                        <% sprintItems1.forEach(function(item){ %>
+                            <% if (item && item.name) { %>
+                                <form action="/deletesprint1" method="post">
+                                    <div class="item">
+                                        <!-- <input onChange="this.form.submit()" name="checkbox" value="<%=item._id %>" type="checkbox"> -->
+                                        <button class="btnRemove" onChange="this.form.submit()" name="checkbox1"
+                                            value="<%=item._id %>" type="submit"><span
+                                                class="material-symbols-outlined">
+                                                delete
+                                            </span></button>
+                                        <p class="text">
+                                            <%= item.name %>
+                                        </p>
+                                    </div>
+                                    <input type="hidden" name="listName1" value="Sprint Backlog"></input>
+                                </form>
+                                <% } %>
+
+
+                                    <% }) %>
+
+                                        <form action="/createsprint1" method="post">
+                                            <input class="textSprint" type="text" name="newEntry1"
+                                                placeholder="'Add Sprint Backlog'" autocomplete="off">
+                                            <button class="btnAdd" type="submit" name="list1"
+                                                value="Create Sprint">+</button>
+                                        </form>
+                    </div>
+                    <div class="box">
+                        <div class="row">
+                            <h1 class=" col-9">Sprint-2</h1>
+                            <form class="col-3" action="/scrumboard2" method="get">
+                                <input type="hidden" name="boardId" value="2">
+
+                                <button class=" btnScrum " type="submit">Go To Scrumboard</button>
+                            </form>
+
+                        </div>
+                        <% sprintItems2.forEach(function(item){ %>
+                            <% if (item && item.name) { %>
+                                <form action="/deletesprint2" method="post">
+                                    <div class="item">
+                                        <button class="btnRemove" onChange="this.form.submit()" name="checkbox2"
+                                            value="<%=item._id %>" type="submit"><span
+                                                class="material-symbols-outlined">
+                                                delete
+                                            </span></button>
+                                        <p class="text">
+                                            <%= item.name %>
+                                        </p>
+                                    </div>
+                                    <input type="hidden" name="listName2" value="Sprint Backlog"></input>
+                                </form>
+                                <% } %>
+
+                                    <% }) %>
+
+                                        <form action="/createsprint2" method="post">
+                                            <input class="textSprint" type="text" name="newEntry2"
+                                                placeholder="'Add Sprint Backlog'" autocomplete="off">
+                                            <button class="btnAdd" type="submit" name="list2"
+                                                value="Create Sprint">+</button>
+                                        </form>
+                    </div>
+
+
+
+
+                </div>
+            </div>
+
+
+
+
+
+
+
+        </section>
+
+        <footer style="margin-bottom: 40px;">
+            <a href="https://paytm.com/">Click here</a>
+            to buy premium for more Sprint creation
+        </footer>
+
+        <%- include("footer") -%>
